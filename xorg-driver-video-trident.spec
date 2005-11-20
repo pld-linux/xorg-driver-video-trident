@@ -1,21 +1,25 @@
 Summary:	X.org video driver for Trident video adapters
 Summary(pl):	Sterownik obrazu X.org dla kart graficznych Trident
 Name:		xorg-driver-video-trident
-Version:	1.0.0.1
+Version:	1.0.0.2
 Release:	0.1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/driver/xf86-video-trident-%{version}.tar.bz2
-# Source0-md5:	408e13b44bf6420b50097fdeaa0d85af
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC2/driver/xf86-video-trident-%{version}.tar.bz2
+# Source0-md5:	6d41b23b9978eba7156fb0c881cc9eb1
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	xorg-proto-fontsproto-devel
+BuildRequires:	xorg-proto-randrproto-devel
+BuildRequires:	xorg-proto-renderproto-devel
 BuildRequires:	xorg-proto-videoproto-devel
+BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-proto-xf86dgaproto-devel
 BuildRequires:	xorg-util-util-macros >= 0.99.1
-BuildRequires:	xorg-xserver-server-devel
+BuildRequires:	xorg-xserver-server-devel >= 0.99.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -66,5 +70,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc ChangeLog
 %attr(755,root,root) %{_libdir}/xorg/modules/drivers/trident_drv.so
 %{_mandir}/man4/trident.4x*
