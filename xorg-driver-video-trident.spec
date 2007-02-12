@@ -1,5 +1,5 @@
 Summary:	X.org video driver for Trident video adapters
-Summary(pl.UTF-8):   Sterownik obrazu X.org dla kart graficznych Trident
+Summary(pl.UTF-8):	Sterownik obrazu X.org dla kart graficznych Trident
 Name:		xorg-driver-video-trident
 Version:	1.2.3
 Release:	0.1
