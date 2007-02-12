@@ -1,5 +1,5 @@
 Summary:	X.org video driver for Trident video adapters
-Summary(pl):	Sterownik obrazu X.org dla kart graficznych Trident
+Summary(pl.UTF-8):   Sterownik obrazu X.org dla kart graficznych Trident
 Name:		xorg-driver-video-trident
 Version:	1.2.3
 Release:	0.1
@@ -33,9 +33,9 @@ Cyber9397DVD), ProVidia (9682, 9685, Cyber9382, Cyber9385, Cyber9388),
 TGUI (9440AGi, 9660, 9680), ISA/VLBus (8900C, 8900D, 9000, 9200CXr,
 Cyber9320, 9400CXi, 9440AGi).
 
-%description -l pl
-Sterownik obrazu X.org dla kart graficznych Trident. Obs³uguje karty
-PCI, AGP i ISA oparte na nastêpuj±cych uk³adach: Blade (Blade3D,
+%description -l pl.UTF-8
+Sterownik obrazu X.org dla kart graficznych Trident. ObsÅ‚uguje karty
+PCI, AGP i ISA oparte na nastÄ™pujÄ…cych ukÅ‚adach: Blade (Blade3D,
 CyberBlade z serii i1, i7 (DSTN), i1, i1 (DSTN), Ai1, Ai1 (DSTN),
 CyberBlade/e4, CyberBladeXP, CyberBladeAi1/XP, BladeXP), Image
 (3DImage975, 3DImage985, Cyber9520, Cyber9525, Cyber9397,
