@@ -2,11 +2,12 @@ Summary:	X.org video driver for Trident video adapters
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla kart graficznych Trident
 Name:		xorg-driver-video-trident
 Version:	1.3.7
-Release:	3
+Release:	4
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-trident-%{version}.tar.bz2
 # Source0-md5:	04243bba246fe369c30a3b970f5b1c23
+Patch0:		xserver-1.19.patch
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -56,6 +57,7 @@ PCI, AGP i ISA oparte na następujących układach:
 
 %prep
 %setup -q -n xf86-video-trident-%{version}
+%patch0 -p1
 
 %build
 %{__libtoolize}
