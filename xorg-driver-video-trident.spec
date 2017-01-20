@@ -1,14 +1,13 @@
 Summary:	X.org video driver for Trident video adapters
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla kart graficznych Trident
 Name:		xorg-driver-video-trident
-Version:	1.3.7
-Release:	4
+Version:	1.3.8
+Release:	1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-trident-%{version}.tar.bz2
-# Source0-md5:	04243bba246fe369c30a3b970f5b1c23
-Patch0:		xserver-1.19.patch
-URL:		http://xorg.freedesktop.org/
+Source0:	https://xorg.freedesktop.org/releases/individual/driver/xf86-video-trident-%{version}.tar.bz2
+# Source0-md5:	ea23158dc50a5bf48a0596b8375ff01f
+URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
@@ -21,9 +20,11 @@ BuildRequires:	xorg-proto-renderproto-devel
 BuildRequires:	xorg-proto-videoproto-devel
 BuildRequires:	xorg-proto-xextproto-devel >= 7.0.99.1
 BuildRequires:	xorg-proto-xf86dgaproto-devel
+BuildRequires:	xorg-proto-xf86dgaproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
 BuildRequires:	xorg-xserver-server-devel >= 1.0.99.901
 %{?requires_xorg_xserver_videodrv}
+Requires:	xorg-lib-libpciaccess >= 0.8.0
 Requires:	xorg-xserver-server >= 1.0.99.901
 Provides:	xorg-driver-video
 Obsoletes:	X11-driver-trident < 1:7.0.0
@@ -57,7 +58,6 @@ PCI, AGP i ISA oparte na następujących układach:
 
 %prep
 %setup -q -n xf86-video-trident-%{version}
-%patch0 -p1
 
 %build
 %{__libtoolize}
